@@ -1733,3 +1733,39 @@ body {
     animation: none !important;
   }
 }
+
+/* RESPONSIVE VIDEO POPUP */
+.video-content {
+  width: 95%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.video-content iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .video-content {
+    width: 95%;
+    max-height: 85vh;
+    padding: 12px;
+  }
+
+  .video-content iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  .video-content .video-caption {
+    font-size: 12px;
+  }
+}
