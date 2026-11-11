@@ -129,8 +129,7 @@ function closeVideo() {
   if (!videoModal) return;
 
   if (projectVideo) {
-    projectVideo.pause();
-    projectVideo.currentTime = 0;
+    projectVideo.src = "";
   }
 
   videoModal.classList.remove("show");

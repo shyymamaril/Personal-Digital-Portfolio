@@ -375,10 +375,16 @@
   <div class="modal-content video-content">
     <button class="close-modal" onclick="closeVideo()" aria-label="Close video">×</button>
     <p class="modal-label">SYSTEM DEMONSTRATION</p>
-    <video id="projectVideo" controls playsinline preload="metadata">
-      <source src="videos/capstone-demo.mp4" type="video/mp4">
-      Your browser does not support video playback.
-    </video>
+
+    <iframe
+      id="projectVideo"
+      src="https://drive.google.com/file/d/1bA42ijh9Eyq1JOWRCCW4K7Tt6oNhKx4a/preview"
+      width="100%"
+      height="450"
+      allow="autoplay; fullscreen"
+      allowfullscreen>
+    </iframe>
+
     <p class="video-caption">
       Agricultural Data Management System with AI Analytics
     </p>
