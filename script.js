@@ -114,27 +114,30 @@ function closeGallery() {
   document.body.style.overflow = "";
 }
 
+
 // VIDEO DEMONSTRATION
 const videoModal = document.getElementById("videoModal");
 const projectVideo = document.getElementById("projectVideo");
 
-function openVideo() {
-  if (!videoModal) return;
+const driveVideoURL =
+  "https://drive.google.com/file/d/1bA42ijh9Eyq1JOWRCCW4K7Tt6oNhKx4a/preview";
 
+function openVideo() {
+  if (!videoModal || !projectVideo) return;
+
+  projectVideo.src = driveVideoURL;
   videoModal.classList.add("show");
   document.body.style.overflow = "hidden";
 }
 
 function closeVideo() {
-  if (!videoModal) return;
+  if (!videoModal || !projectVideo) return;
 
-  if (projectVideo) {
-    projectVideo.src = "";
-  }
-
+  projectVideo.src = "";
   videoModal.classList.remove("show");
   document.body.style.overflow = "";
 }
+
 
 // CLOSE POPUPS WHEN CLICKING OUTSIDE
 [certificateModal, galleryModal, videoModal]
